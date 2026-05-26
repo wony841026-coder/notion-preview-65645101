@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>서리풀동의보감한의원</title>
+  <meta name="description" content="동의보감의 지혜와 현대 한의학의 정밀함으로 건강한 일상을 설계하는 서리풀동의보감한의원">
+  <meta property="og:title" content="서리풀동의보감한의원">
+  <meta property="og:description" content="몸과 마음을 함께 돌보는 한의원 — 재활의학과, 내과, 부인과, 소아과, 신경정신과 진료">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231B365D'/><text x='16' y='22' text-anchor='middle' font-size='14' fill='white' font-family='sans-serif'>서</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@600;700&display=swap');
+    :root{--primary:#1B365D;--primary-light:#2a4f80;--accent:#C9A96E;--accent-hover:#b8963d;--bg:#ffffff;--bg-alt:#F8F9FA;--text:#333333;--text-light:#666666;--border:#E2E8F0;--radius:12px;--shadow:0 2px 12px rgba(0,0,0,.08)}
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:80px}
+    body{font-family:'Noto Sans KR',-apple-system,sans-serif;color:var(--text);line-height:1.7;background:var(--bg)}
+    h1,h2,h3{font-family:'Noto Serif KR',serif;line-height:1.3}
+    .container{max-width:1100px;margin:0 auto;padding:0 1.5rem}
+    .section{padding:5rem 0}
+    .section-alt{background:var(--bg-alt)}
+    .section-title{font-size:2rem;color:var(--primary);text-align:center;margin-bottom:.75rem}
+    .section-desc{text-align:center;color:var(--text-light);max-width:600px;margin:0 auto 2.5rem}
+    #gnb{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);z-index:1000;border-bottom:1px solid var(--border);transition:box-shadow .3s}
+    #gnb.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.1)}
+    .nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 1.5rem;height:64px}
+    .logo{font-family:'Noto Serif KR',serif;font-size:1.1rem;font-weight:700;color:var(--primary);text-decoration:none}
+    .nav-links{display:flex;list-style:none;gap:.25rem;align-items:center}
+    .nav-links a{display:block;padding:.5rem .875rem;color:var(--text);text-decoration:none;font-size:.9rem;font-weight:500;border-radius:8px;transition:all .2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--primary);background:rgba(27,54,93,.06)}
+    .nav-cta{background:var(--primary)!important;color:#fff!important;border-radius:8px!important}
+    .nav-cta:hover{background:var(--primary-light)!important}
+    .hamburger{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--primary)}
+    .hero{padding:10rem 0 6rem;background:linear-gradient(135deg,#1B365D 0%,#2a4f80 50%,#3a6b9f 100%);color:#fff;text-align:center}
+    .hero h1{font-size:2.75rem;margin-bottom:1.25rem}
+    .hero-sub{font-size:1.15rem;opacity:.9;margin-bottom:2.5rem;line-height:1.8}
+    .cta-btn{display:inline-block;padding:.875rem 2rem;background:var(--accent);color:#fff;text-decoration:none;border-radius:50px;font-size:1.05rem;font-weight:700;transition:all .3s;box-shadow:0 4px 15px rgba(201,169,110,.4)}
+    .cta-btn:hover{background:var(--accent-hover);transform:translateY(-2px);box-shadow:0 6px 20px rgba(201,169,110,.5)}
+    .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;margin-top:2.5rem}
+    .spec-card{background:#fff;border-radius:var(--radius);padding:2rem 1.5rem;text-align:center;box-shadow:var(--shadow);cursor:pointer;border:2px solid transparent;transition:all .3s}
+    .spec-card:hover{border-color:var(--primary);transform:translateY(-4px);box-shadow:0 8px 25px rgba(0,0,0,.12)}
+    .spec-icon{font-size:2.5rem;display:block;margin-bottom:.75rem}
+    .spec-card h3{color:var(--primary);margin-bottom:.5rem;font-size:1.1rem}
+    .spec-card p{color:var(--text-light);font-size:.9rem}
+    .about-greeting{max-width:700px;margin:0 auto 2rem;text-align:center}
+    .about-greeting p{margin-bottom:1rem;font-size:1.05rem}
+    .phil-card{background:#fff;border-radius:var(--radius);padding:2rem;box-shadow:var(--shadow);border-left:4px solid var(--primary)}
+    .phil-icon{font-size:1.75rem;display:block;margin-bottom:.75rem}
+    .phil-card h3{color:var(--primary);margin-bottom:.5rem}
+    .phil-card p{color:var(--text-light);font-size:.95rem}
+    .values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+    .value-item{text-align:center;padding:1.5rem;border:1px solid var(--border);border-radius:var(--radius)}
+    .value-item h4{color:var(--primary);margin-bottom:.5rem;font-family:'Noto Serif KR',serif}
+    .value-item p{color:var(--text-light);font-size:.9rem}
+    .doctor-profile{display:grid;grid-template-columns:280px 1fr;gap:3rem;align-items:start;margin-bottom:3rem}
+    .photo-placeholder{width:280px;height:340px;background:linear-gradient(135deg,#e8ecf1,#d1d8e0);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:1.25rem;color:var(--text-light);font-weight:700}
+    .doctor-info blockquote{font-family:'Noto Serif KR',serif;font-size:1.15rem;color:var(--primary);font-style:italic;border-left:3px solid var(--accent);padding-left:1.25rem;margin-bottom:1.5rem}
+    .doctor-info h3{font-size:1.5rem;color:var(--primary);margin-bottom:1.5rem}
+    .doctor-section{margin-bottom:1.25rem}
+    .doctor-section h4{color:var(--accent);font-size:.9rem;margin-bottom:.5rem;text-transform:uppercase;letter-spacing:1px;font-family:'Noto Sans KR',sans-serif}
+    .doctor-section ul{list-style:none}
+    .doctor-section li{padding:.25rem 0;padding-left:1rem;position:relative}
+    .doctor-section li::before{content:'·';position:absolute;left:0;color:var(--primary);font-weight:700}
+    .papers h4{font-size:1.2rem;color:var(--primary);margin-bottom:1rem;font-family:'Noto Serif KR',serif}
+    .info-table{width:100%;border-collapse:collapse}
+    .info-table th{background:var(--primary);color:#fff;padding:.75rem 1rem;text-align:left;font-size:.9rem;font-weight:500}
+    .info-table td{padding:.75rem 1rem;border-bottom:1px solid var(--border);font-size:.95rem}
+    .info-table tbody tr:hover{background:rgba(27,54,93,.03)}
+    .info-table.compact td{padding:.5rem .75rem;font-size:.9rem}
+    .treat-tabs{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin-bottom:2rem}
+    .treat-tab{padding:.625rem 1.25rem;border:2px solid var(--border);border-radius:50px;background:#fff;cursor:pointer;font-size:.9rem;font-weight:500;transition:all .2s;color:var(--text);font-family:'Noto Sans KR',sans-serif}
+    .treat-tab:hover{border-color:var(--primary);color:var(--primary)}
+    .treat-tab.active{background:var(--primary);color:#fff;border-color:var(--primary)}
+    .treat-panel{display:none;background:#fff;border-radius:var(--radius);padding:2rem;box-shadow:var(--shadow)}
+    .treat-panel.active{display:block}
+    .treat-panel h3{color:var(--primary);margin-bottom:.5rem}
+    .panel-desc{color:var(--text-light);margin-bottom:1.5rem}
+    .treat-cta{text-align:center;margin-top:2.5rem}
+    .dir-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+    .map-placeholder{background:linear-gradient(135deg,#e8ecf1,#d1d8e0);border-radius:var(--radius);padding:3rem 2rem;text-align:center;min-height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+    .map-placeholder p{font-size:1.1rem;margin-bottom:1rem;line-height:1.8}
+    .map-link{color:var(--primary);text-decoration:none;font-weight:700;font-size:.95rem;padding:.5rem 1.25rem;border:2px solid var(--primary);border-radius:8px;transition:all .2s}
+    .map-link:hover{background:var(--primary);color:#fff}
+    .dir-section{margin-bottom:1.5rem}
+    .dir-section h4{color:var(--primary);margin-bottom:.5rem}
+    .dir-section ul{list-style:none}
+    .dir-section li{padding:.25rem 0}
+    .contact-phone{text-align:center;margin-bottom:3rem}
+    .phone-label{font-size:1.1rem;margin-bottom:1rem;color:var(--text-light)}
+    .phone-number{display:inline-block;font-size:2.5rem;font-weight:700;color:var(--primary);text-decoration:none;padding:1rem 2.5rem;border:3px solid var(--primary);border-radius:var(--radius);transition:all .3s}
+    .phone-number:hover{background:var(--primary);color:#fff}
+    .visit-guide{max-width:700px;margin:0 auto}
+    .visit-guide h3{color:var(--primary);margin:2rem 0 1.25rem;font-size:1.25rem}
+    .visit-guide>p{color:var(--text-light)}
+    .steps{display:flex;flex-direction:column;gap:1rem}
+    .step{display:flex;align-items:flex-start;gap:1rem;padding:1rem 1.25rem;background:#fff;border-radius:var(--radius);box-shadow:var(--shadow)}
+    .step-num{width:36px;height:36px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;flex-shrink:0}
+    .step strong{display:block;color:var(--primary);margin-bottom:.25rem}
+    .step p{color:var(--text-light);font-size:.9rem;margin:0}
+    #footer{background:#1a2a3a;color:#ccc;padding:3rem 0 0}
+    .footer-inner{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+    .footer-col h4{color:#fff;margin-bottom:.75rem;font-size:1rem;font-family:'Noto Serif KR',serif}
+    .footer-col p{font-size:.9rem;line-height:1.7}
+    .footer-col a{color:#ccc;text-decoration:none;transition:color .2s}
+    .footer-col a:hover{color:var(--accent)}
+    .footer-col ul{list-style:none}
+    .footer-col li{padding:.2rem 0}
+    .footer-col li a{font-size:.9rem}
+    .footer-bottom{text-align:center;padding:1.5rem 0;margin-top:2rem;border-top:1px solid rgba(255,255,255,.1);font-size:.85rem}
+    @media(max-width:768px){
+      .hamburger{display:block}
+      .nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:#fff;flex-direction:column;padding:1rem;box-shadow:0 4px 20px rgba(0,0,0,.1);gap:0}
+      .nav-links.open{display:flex}
+      .nav-links a{padding:.75rem 1rem}
+      .nav-cta{text-align:center;margin-top:.5rem}
+      .hero{padding:8rem 0 4rem}
+      .hero h1{font-size:2rem}
+      .hero-sub{font-size:1rem}
+      .section{padding:3.5rem 0}
+      .section-title{font-size:1.6rem}
+      .card-grid{grid-template-columns:1fr 1fr;gap:1rem}
+      .phil-grid{grid-template-columns:1fr}
+      .values-grid{grid-template-columns:1fr}
+      .doctor-profile{grid-template-columns:1fr;gap:2rem}
+      .photo-placeholder{width:100%;height:250px}
+      .dir-grid{grid-template-columns:1fr}
+      .footer-inner{grid-template-columns:1fr;gap:1.5rem}
+      .phone-number{font-size:1.75rem;padding:.75rem 1.5rem}
+      .treat-tabs{gap:.35rem}
+      .treat-tab{font-size:.8rem;padding:.5rem 1rem}
+    }
+    @media(max-width:480px){
+      .card-grid{grid-template-columns:1fr}
+      .hero h1{font-size:1.75rem}
+    }
+  </style>
+</head>
+<body>
+
+<nav id="gnb">
+  <div class="nav-inner">
+    <a href="#hero" class="logo">🌿 서리풀동의보감한의원</a>
+    <button class="hamburger" id="hamburger" aria-label="메뉴">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">한의원 소개</a></li>
+      <li><a href="#doctor">의료진</a></li>
+      <li><a href="#treatments">진료 안내</a></li>
+      <li><a href="#directions">오시는 길</a></li>
+      <li><a href="#contact" class="nav-cta">예약·상담</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section id="hero" class="hero">
+  <div class="container hero-content">
+    <h1>몸과 마음을 함께<br>돌보는 한의원</h1>
+    <p class="hero-sub">동의보감의 지혜와 현대 한의학의 정밀함으로,<br>당신의 건강한 일상을 설계합니다.</p>
+    <a href="tel:02-3487-1075" class="cta-btn">📞 진료 예약하기</a>
+  </div>
+</section>
+
+<section id="specialties" class="section">
+  <div class="container">
+    <h2 class="section-title">핵심 진료 과목</h2>
+    <div class="card-grid">
+      <div class="spec-card" data-target="rehab"><span class="spec-icon">💪</span><h3>재활의학과</h3><p>디스크 · 오십견 · 관절염</p></div>
+      <div class="spec-card" data-target="internal"><span class="spec-icon">🫁</span><h3>내과</h3><p>감기 · 소화장애 · 두통 · 수술후회복</p></div>
+      <div class="spec-card" data-target="womens"><span class="spec-icon">🌸</span><h3>부인과</h3><p>갱년기 · 산후조리 · 생리통 · 난임</p></div>
+      <div class="spec-card" data-target="pediatric"><span class="spec-icon">🌱</span><h3>소아과</h3><p>성장 · 비염 · 아토피 · 식욕부진</p></div>
+      <div class="spec-card" data-target="neuro"><span class="spec-icon">🧠</span><h3>신경정신과</h3><p>불면증 · 우울증</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">한의원 소개</h2>
+    <div class="about-greeting">
+      <p>서리풀동의보감한의원은 <strong>동의보감의 전통 지혜</strong>와 <strong>현대 한의학의 과학적 접근</strong>을 결합하여, 환자 한 분 한 분의 체질과 상태에 맞는 진료를 제공합니다.</p>
+      <p>단순히 증상을 완화하는 데 그치지 않고, <strong>몸의 근본적인 균형을 회복</strong>시키는 것을 목표로 합니다.</p>
+    </div>
+    <div class="card-grid phil-grid">
+      <div class="phil-card"><span class="phil-icon">🔍</span><h3>근본 치료</h3><p>증상이 아닌 원인을 봅니다. 체질과 생활 습관을 종합적으로 분석하여 근본적인 치료 방향을 설계합니다.</p></div>
+      <div class="phil-card"><span class="phil-icon">🤝</span><h3>소통하는 진료</h3><p>환자의 이야기를 충분히 듣고, 치료 과정을 명확히 설명합니다. 이해와 신뢰 위에 치료가 시작됩니다.</p></div>
+      <div class="phil-card"><span class="phil-icon">📐</span><h3>형상의학적 접근</h3><p>대한형상의학회 교수로서의 전문성을 바탕으로, 사람의 형상과 체질을 관찰하여 최적화된 처방을 제공합니다.</p></div>
+    </div>
+    <div class="values-grid">
+      <div class="value-item"><h4>정확한 진단</h4><p>형상의학 + 현대 진단 기법으로 정밀한 체질 분석</p></div>
+      <div class="value-item"><h4>맞춤 치료</h4><p>개인별 체질·증상·생활에 최적화된 치료 계획</p></div>
+      <div class="value-item"><h4>지속적 관리</h4><p>치료 이후에도 건강한 생활을 유지할 수 있도록 관리</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="doctor" class="section">
+  <div class="container">
+    <h2 class="section-title">의료진 소개</h2>
+    <div class="doctor-profile">
+      <div class="doctor-photo"><div class="photo-placeholder">윤원 원장</div></div>
+      <div class="doctor-info">
+        <blockquote>"증상이 아닌 사람을 봅니다. 형상과 체질을 읽어 가장 정확한 처방을 찾습니다."</blockquote>
+        <h3>윤원 원장</h3>
+        <div class="doctor-section"><h4>현직</h4><ul><li>서리풀동의보감한의원 원장</li><li>대한형상의학회 교수 및 정회원</li><li>더나은침 연구소 연구위원</li></ul></div>
+        <div class="doctor-section"><h4>경력</h4><ul><li>한국한의학연구원 'AI-한의사' 과제 연구위원</li><li>지리산 산청한의원 원장</li><li>본디올 홍제한의원 원장</li></ul></div>
+        <div class="doctor-section"><h4>학력</h4><ul><li>대구한의대 한의과 대학 졸업</li><li>서울대학교 공학계열 수료</li></ul></div>
+      </div>
+    </div>
+    <div class="papers">
+      <h4>주요 논문 발표</h4>
+      <table class="info-table">
+        <thead><tr><th>연도</th><th>논문명</th></tr></thead>
+        <tbody>
+          <tr><td>2025</td><td>쌍패탕의 형상의학적 활용연구</td></tr>
+          <tr><td>2018</td><td>화담청화탕의 형상의학적 활용</td></tr>
+          <tr><td>2017</td><td>피부질환의 형상의학적 고찰</td></tr>
+          <tr><td>2016</td><td>삼소음의 형상의학적 활용</td></tr>
+          <tr><td>2015</td><td>당귀점통탕의 형상의학적 활용</td></tr>
+          <tr><td>2014</td><td>궁궁산의 형상의학적 활용</td></tr>
+          <tr><td>2008</td><td>동의보감에서 오행배열 순서의 의미 고찰</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="treatments" class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">진료 안내</h2>
+    <p class="section-desc">형상의학적 체질 분석을 기반으로 한약, 침, 약침 등 다양한 치료법을 개인에 맞게 적용합니다.</p>
+    <div class="treat-tabs">
+      <button class="treat-tab active" data-tab="rehab">💪 재활의학과</button>
+      <button class="treat-tab" data-tab="internal">🫁 내과</button>
+      <button class="treat-tab" data-tab="womens">🌸 부인과</button>
+      <button class="treat-tab" data-tab="pediatric">🌱 소아과</button>
+      <button class="treat-tab" data-tab="neuro">🧠 신경정신과</button>
+    </div>
+    <div class="treat-panels">
+      <div class="treat-panel active" id="panel-rehab">
+        <h3>재활의학과</h3>
+        <p class="panel-desc">통증의 근본 원인을 찾아 한방 재활치료로 회복합니다.</p>
+        <table class="info-table"><thead><tr><th>질환</th><th>설명</th></tr></thead><tbody>
+          <tr><td><strong>디스크</strong></td><td>경추·요추 디스크 탈출로 인한 통증과 저림. 침·약침·추나요법으로 신경 압박을 완화하고 주변 근육을 강화합니다.</td></tr>
+          <tr><td><strong>오십견</strong></td><td>어깨 관절 유착으로 인한 운동 제한과 통증. 침 치료와 한약으로 염증을 줄이고 관절 가동 범위를 회복합니다.</td></tr>
+          <tr><td><strong>관절염</strong></td><td>무릎·손목 등 관절의 퇴행성·류마티스 염증. 한약과 약침으로 염증을 억제하고 관절 기능을 보존합니다.</td></tr>
+        </tbody></table>
+      </div>
+      <div class="treat-panel" id="panel-internal">
+        <h3>내과</h3>
+        <p class="panel-desc">체질에 맞는 한약과 침 치료로 내과 질환을 근본부터 관리합니다.</p>
+        <table class="info-table"><thead><tr><th>질환</th><th>설명</th></tr></thead><tbody>
+          <tr><td><strong>감기</strong></td><td>잦은 감기, 기침, 콧물. 체질에 맞는 한약으로 면역력을 높이고 빠른 회복을 돕습니다.</td></tr>
+          <tr><td><strong>소화장애</strong></td><td>위장 기능 저하, 더부룩함, 속쓰림. 비위 기능을 강화하는 한약과 침 치료로 소화력을 개선합니다.</td></tr>
+          <tr><td><strong>두통</strong></td><td>긴장성·편두통 등 만성 두통. 원인(혈허, 담음, 어혈 등)을 감별하여 맞춤 치료합니다.</td></tr>
+          <tr><td><strong>수술후회복</strong></td><td>수술 이후 기력 저하, 부종, 통증. 보약과 침 치료로 빠른 회복과 체력 보충을 지원합니다.</td></tr>
+        </tbody></table>
+      </div>
+      <div class="treat-panel" id="panel-womens">
+        <h3>부인과</h3>
+        <p class="panel-desc">여성의 생애주기에 맞춘 맞춤 한방 진료를 제공합니다.</p>
+        <table class="info-table"><thead><tr><th>질환</th><th>설명</th></tr></thead><tbody>
+          <tr><td><strong>갱년기</strong></td><td>안면홍조, 발한, 불면, 감정 변화. 호르몬 변화에 따른 증상을 한약으로 자연스럽게 조절합니다.</td></tr>
+          <tr><td><strong>산후조리</strong></td><td>출산 후 체력 회복, 산후풍 예방. 산후보약과 침 치료로 산모의 빠른 회복을 돕습니다.</td></tr>
+          <tr><td><strong>생리통</strong></td><td>생리 전후 하복부 통증, 허리 통증. 어혈과 기혈 순환을 개선하여 통증을 줄입니다.</td></tr>
+          <tr><td><strong>난임</strong></td><td>자궁·난소 기능 개선을 통한 임신 준비. 체질별 한약과 침 치료로 착상 환경을 조성합니다.</td></tr>
+        </tbody></table>
+      </div>
+      <div class="treat-panel" id="panel-pediatric">
+        <h3>소아과</h3>
+        <p class="panel-desc">아이의 체질과 성장 단계를 고려한 한방 소아 진료입니다.</p>
+        <table class="info-table"><thead><tr><th>질환</th><th>설명</th></tr></thead><tbody>
+          <tr><td><strong>성장</strong></td><td>성장판 검사와 체질 분석 후 성장한약 처방. 키 성장뿐 아니라 전반적 발달을 지원합니다.</td></tr>
+          <tr><td><strong>비염</strong></td><td>잦은 코막힘, 재채기, 맑은 콧물. 폐·비위 기능을 강화하여 비염 재발을 줄입니다.</td></tr>
+          <tr><td><strong>아토피피부염</strong></td><td>가려움, 건조, 반복되는 피부 염증. 체질 개선 한약과 외용제로 피부 장벽을 회복합니다.</td></tr>
+          <tr><td><strong>식욕부진</strong></td><td>밥을 잘 안 먹는 아이, 체중 미달. 비위 기능을 보강하여 식욕과 소화 흡수력을 높입니다.</td></tr>
+        </tbody></table>
+      </div>
+      <div class="treat-panel" id="panel-neuro">
+        <h3>신경정신과</h3>
+        <p class="panel-desc">마음의 균형을 되찾는 한방 심신 치료를 합니다.</p>
+        <table class="info-table"><thead><tr><th>질환</th><th>설명</th></tr></thead><tbody>
+          <tr><td><strong>불면증</strong></td><td>잠들기 어렵거나 자주 깨는 수면 장애. 심화(心火)를 내리고 안신(安神)하는 한약과 침 치료로 자연스러운 수면을 회복합니다.</td></tr>
+          <tr><td><strong>우울증</strong></td><td>지속적 무기력, 의욕 저하, 감정 침체. 기울(氣鬱)을 풀어주는 한약과 침 치료로 심신의 활력을 되찾습니다.</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+    <div class="treat-cta"><a href="tel:02-3487-1075" class="cta-btn">📞 진료 예약하기</a></div>
+  </div>
+</section>
+
+<section id="directions" class="section">
+  <div class="container">
+    <h2 class="section-title">오시는 길</h2>
+    <div class="dir-grid">
+      <div class="dir-map">
+        <div class="map-placeholder">
+          <p>📍 서울시 서초구 방배천로 18길 32<br>방배코너스톤 1층</p>
+          <a href="https://map.naver.com/v5/search/서리풀동의보감한의원" target="_blank" rel="noopener" class="map-link">네이버 지도에서 보기 →</a>
+        </div>
+      </div>
+      <div class="dir-info">
+        <div class="dir-section"><h4>🚇 지하철</h4><ul><li><strong>이수역 (4·7호선)</strong> 6번 출구 → 도보 약 10분</li><li><strong>사당역 (2·4호선)</strong> 11번 출구 → 도보 약 15분</li></ul></div>
+        <div class="dir-section"><h4>🚌 버스</h4><ul><li>이수역, 사당동 우체국앞 정류장 하차 → 도보 약 5분</li></ul></div>
+        <div class="dir-section"><h4>🚗 자가용</h4><ul><li>네비 "서리풀동의보감한의원" 검색. 방배롯데캐슬아르떼 정문 건너편 (설레임 카페 옆 주차 가능)</li></ul></div>
+        <div class="dir-section">
+          <h4>🕐 진료시간</h4>
+          <table class="info-table compact"><tbody>
+            <tr><td>평일</td><td>09:30 ~ 18:30</td></tr>
+            <tr><td>화요일</td><td>09:30 ~ <strong>19:00</strong> (야간 연장)</td></tr>
+            <tr><td>토요일·공휴일</td><td>09:00 ~ 16:00</td></tr>
+            <tr><td>점심시간</td><td>13:00 ~ 14:00</td></tr>
+            <tr><td>휴진</td><td>매주 수요일, 일요일</td></tr>
+          </tbody></table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">예약·상담</h2>
+    <div class="contact-phone">
+      <p class="phone-label">전화 한 통으로 간편하게 예약하세요</p>
+      <a href="tel:02-3487-1075" class="phone-number">📞 02-3487-1075</a>
+    </div>
+    <div class="visit-guide">
+      <h3>초진 안내 (처음 방문)</h3>
+      <div class="steps">
+        <div class="step"><span class="step-num">1</span><div><strong>전화 예약</strong><p>원하시는 날짜와 시간을 말씀해 주세요.</p></div></div>
+        <div class="step"><span class="step-num">2</span><div><strong>내원</strong><p>예약 시간 10분 전에 방문해 주세요.</p></div></div>
+        <div class="step"><span class="step-num">3</span><div><strong>문진표 작성</strong><p>현재 증상과 건강 이력을 작성합니다.</p></div></div>
+        <div class="step"><span class="step-num">4</span><div><strong>진료</strong><p>원장이 직접 체질 분석과 상담을 진행합니다.</p></div></div>
+        <div class="step"><span class="step-num">5</span><div><strong>치료 계획 안내</strong><p>맞춤 치료 계획을 설명드립니다.</p></div></div>
+      </div>
+      <h3>재진 안내</h3>
+      <p>전화 또는 방문 시 다음 예약을 잡으실 수 있습니다. 예약 변경이 필요하시면 전화로 연락해 주세요.</p>
+    </div>
+  </div>
+</section>
+
+<footer id="footer">
+  <div class="container footer-inner">
+    <div class="footer-col"><h4>서리풀동의보감한의원</h4><p>서울시 서초구 방배천로 18길 32<br>방배코너스톤 1층</p><p><a href="tel:02-3487-1075">📞 02-3487-1075</a></p></div>
+    <div class="footer-col"><h4>진료시간</h4><p>평일 09:30~18:30 (화 19:00)<br>토·공휴일 09:00~16:00<br>점심 13:00~14:00<br>휴진: 수요일, 일요일</p></div>
+    <div class="footer-col"><h4>바로가기</h4><ul><li><a href="#about">한의원 소개</a></li><li><a href="#doctor">의료진 소개</a></li><li><a href="#treatments">진료 안내</a></li><li><a href="#directions">오시는 길</a></li><li><a href="#contact">예약·상담</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 서리풀동의보감한의원. All rights reserved.</p></div>
+</footer>
+
+<script>
+var hamburger=document.getElementById('hamburger');
+var navLinks=document.getElementById('navLinks');
+hamburger.addEventListener('click',function(){navLinks.classList.toggle('open');hamburger.textContent=navLinks.classList.contains('open')?'✕':'☰'});
+document.querySelectorAll('.nav-links a').forEach(function(link){link.addEventListener('click',function(){navLinks.classList.remove('open');hamburger.textContent='☰'})});
+var gnb=document.getElementById('gnb');
+window.addEventListener('scroll',function(){gnb.classList.toggle('scrolled',window.scrollY>10)});
+document.querySelectorAll('.treat-tab').forEach(function(tab){tab.addEventListener('click',function(){document.querySelectorAll('.treat-tab').forEach(function(t){t.classList.remove('active')});document.querySelectorAll('.treat-panel').forEach(function(p){p.classList.remove('active')});tab.classList.add('active');var panel=document.getElementById('panel-'+tab.dataset.tab);if(panel)panel.classList.add('active')})});
+document.querySelectorAll('.spec-card').forEach(function(card){card.addEventListener('click',function(){var target=card.dataset.target;document.querySelectorAll('.treat-tab').forEach(function(t){t.classList.remove('active')});document.querySelectorAll('.treat-panel').forEach(function(p){p.classList.remove('active')});var matchTab=document.querySelector('.treat-tab[data-tab="'+target+'"]');if(matchTab)matchTab.classList.add('active');var matchPanel=document.getElementById('panel-'+target);if(matchPanel)matchPanel.classList.add('active');document.getElementById('treatments').scrollIntoView({behavior:'smooth'})})});
+var sections=document.querySelectorAll('section[id]');
+window.addEventListener('scroll',function(){var scrollY=window.scrollY+100;sections.forEach(function(section){var top=section.offsetTop;var height=section.offsetHeight;var id=section.getAttribute('id');var link=document.querySelector('.nav-links a[href="#'+id+'"]');if(link){if(scrollY>=top&&scrollY<top+height){link.classList.add('active')}else{link.classList.remove('active')}}})});
+</script>
+
+</body>
+</html>
